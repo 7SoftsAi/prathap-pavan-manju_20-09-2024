@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Generation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="lead-section">
+        <div class="image-container">
+            <!-- <img src="./templatemo_570_chain_app_dev/img/Untitled design.mp4" alt="Lead Image" class="lead-image" /> -->
+            <!-- You can replace the img tag with a video tag if you want -->
+            <video autoplay muted loop class="lead-video" style="height: 400px;">
+                <source src="./templatemo_570_chain_app_dev/img/Untitled design.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="content-container">
+            <h1 class="content-title">Recharge & Get Quality Leads</h1>
+            <p class="content-description">
+                Recharge your account with ₹5000 and for each quality lead, ₹100 will be deducted automatically from your balance. Stay on top of your leads with ease!
+            </p>
+            <div class="recharge-info">
+                <div class="balance-bar">
+                    <div class="balance-fill"></div>
+                </div>
+                <p class="balance-text">₹5000 Balance Remaining</p>
+            </div>
+            <button class="lead-button">Recharge Now</button>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.lead-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.image-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.lead-image, .lead-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.content-container {
+    flex: 1;
+    padding: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.content-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.content-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.lead-button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.lead-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .lead-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container, .content-container {
+        flex: none;
+        width: 100%;
+    }
+
+    .content-title {
+        font-size: 2rem;
+    }
+
+    .content-description {
+        font-size: 1rem;
+    }
+
+    .lead-button {
+        width: 100%;
+    }
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+</style>
+<script>
+    document.querySelector('.lead-button').addEventListener('click', () => {
+    alert("Thank you for your interest! We will contact you shortly.");
+});
+
+</script>
